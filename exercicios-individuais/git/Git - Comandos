@@ -1,0 +1,20 @@
+Atividade 1
+git init
+git config --global user.name "Nome"
+git config --global user.email "Email"
+git branch -M main
+git branch melhorias-estrutura
+git checkout
+git merge
+git commit -m "Descrição"
+git remote add origin URL
+git push origin main
+
+Atividade 2
+git clone URL
+git config --global user.name "Nome"
+git config --global user.email "Email"
+git branch -M main 
+git add .
+git commit -m "Descrição" 
+git push origin main
