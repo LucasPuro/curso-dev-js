@@ -17,3 +17,7 @@ Ações do usuário (como cliques, pressionamentos de tecla) que disparam funç�
 
 Estruturas de Controle:
 Comandos como if, else, for, e while que controlam o fluxo de execução do código. 
+
+
+
+Lucas Puro Caminhoto
