@@ -1,0 +1,40 @@
+Comandos utilizados - Atividade 25/07
+
+cd C:\Users\44692949856\Desktop
+md projeto_responsivo
+cd projeto_responsivo
+md public
+md src
+md docs
+cd public
+md html
+md css
+md js
+md media
+cd media
+dir
+cd ..
+cd html
+echo Projeto Responsivo > home.html
+cd ..
+cd css
+echo body { margin: 0; padding: 0; background-color: lightgray; } > theme.css
+cd ..
+cd media
+md imagens
+md fontes
+cd ..
+copy C:\Users\44692949856\Desktop\projeto_responsivo\public\css\theme.css C:\Users\44692949856\Desktop\projeto_responsivo\docs
+cd js
+echo console.log("Site responsivo pronto!"); > responsivo.js
+echo console.log("Utilitários carregados!"); > utils.js
+rename utils.js helpers.js
+cd ..
+dir /s
+dir ..
+cd docs
+del theme.css
+cd ..
+cd public
+cd html
+notepad home.html
