@@ -1,0 +1,19 @@
+Conceitos básicos
+
+Variáveis:
+Espaços de memória nomeados para armazenar dados. No JavaScript, você pode declarar variáveis usando var, let ou const. 
+
+Funções:
+Blocos de código reutilizáveis que realizam tarefas específicas. As funções podem receber argumentos e retornar valores. 
+
+Objetos:
+Coleções de propriedades, onde cada propriedade tem um nome (chave) e um valor. Objetos são a base da programação orientada a objetos em JavaScript. 
+
+Arrays:
+Tipos especiais de objetos que armazenam listas de valores. Arrays em JavaScript podem conter diferentes tipos de dados. 
+
+Eventos:
+Ações do usuário (como cliques, pressionamentos de tecla) que disparam funções em resposta. O JavaScript é uma linguagem orientada a eventos. 
+
+Estruturas de Controle:
+Comandos como if, else, for, e while que controlam o fluxo de execução do código. 
