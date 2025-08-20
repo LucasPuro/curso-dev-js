@@ -6,6 +6,8 @@ curso-dev-js
 <pre>├── README.md  
 ├── pesquisa.txt (informações relevantes sobre JS)  
 ├── atividades-praticas  
+│   └── prototipo
+│   └── html
 │   └── (atividades em grupo ou da aula)  
 └── exercicios-individuais  
       └── cmd  
