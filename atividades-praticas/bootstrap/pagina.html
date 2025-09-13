@@ -18,13 +18,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sobre</a>
+                <a class="nav-link active" aria-current="page" href="#sobre">Sobre</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Serviços</a>
+                <a class="nav-link" href="#servicos">Serviços</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link" href="#contato">Contato</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -60,49 +60,98 @@
       </div>
       <!-- FIM CARROSSEL -->
 
+
+      <!-- INICIO Sobre -->
+
+      <div id="sobre" class="container mt-5">
+        <!-- div.row>div.col-12.col-md-6*2 -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <!-- img.img-fluid.rounded -->
+            <img src="https://picsum.photos/600/500?random=7" alt="" class="img-fluid rounded">
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center">
+            <div>
+            <h2>Sobre nós</h2>
+            <p>Somos uma empresa de tecnologia voltada a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deleniti autem vitae aspernatur fugit nam!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIM SOBRE -->
+
+
       <!-- INICIO SERVIÇOS -->
-        <div class="container text-center">
+        <div id="servicos" class="container text-center my-3">
             <h2>Nossos Serviços</h2>
 
             <!-- div.row>div.col-12.col-md-4*3 -> Ocupa 4 colunas se for maior que MD-->
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://picsum.photos/200/100?random=1" class="card-img-top" alt="...">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
+                        <img src="https://picsum.photos/300/100?random=4" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Desenvolvimento Web</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur neque quidem nobis suscipit magnam deleniti distinctio voluptate?</p>
+                          <a href="#" class="btn btn-primary">Ir para o serviço</a>
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://picsum.photos/200/100?random=2" class="card-img-top" alt="...">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
+                        <img src="https://picsum.photos/300/100?random=5" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Serviços de Cloud</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quia animi voluptate iusto ex minus asperiores aut magni consequatur a!</p>
+                          <a href="#" class="btn btn-primary">Ir para o serviço</a>
                         </div>
                       </div>
                 </div>
-                <div class="col-12 col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="https://picsum.photos/200/100?random=3" class="card-img-top" alt="...">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="card">
+                        <img src="https://picsum.photos/300/100?random=6" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">Suporte 24h</h5>
+                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, voluptates repellendus. Ipsum facilis sed voluptatem, neque facere nesciunt! Natus, quae!</p>
+                          <a href="#" class="btn btn-primary">Ir para o serviço</a>
                         </div>
                       </div>
                 </div>
             </div>
-
         </div>
       <!-- FIM SERVICOS -->
 
+      <!-- INICIO CONTATO -->
 
+        <!-- div.container>div.row>div.col -->
+        <div id="contato" class="container my-3">
+          <div class="row">
+            <div class="col">
+              <h2>Contato</h2>
+              <!-- input nome, cidade e telefone -->
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+              </div>
+              <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" placeholder="Informe sua cidade">
+              </div>
+              <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX">
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+              </div>
+              <button type="button" class="btn btn-success mb-3">Enviar</button>
+            </div>
+          </div>
+        </div>
 
+      <!-- FIM CONTATO -->
 
 
 
