@@ -9,7 +9,7 @@
 <body class="bg-dark">
     
     <!-- MENU INICIO -->
-    <nav id="inicio" class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav id="inicio" class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
             <img src="src/logo.png" alt="Bootstrap" width="65" height="65">
@@ -41,21 +41,52 @@
     <!-- MENU FIM -->
 
 
+    <!-- APRESENTAÇÃO INICIO -->
+
+    <div id="inicio" class="container-fluid"> <!-- "-fluid" mantém a largura máxima em todos as telas -->
+      <div class="row"> <!-- determina uma "linha" que receberá a imagem e o slogan -->
+        <div class="col-sm text-light text-center my-5 fw-bold fst-italic">
+          <h1 class="display-1">Burguer House</h1> <!-- display-1 torna o texto uma "manchete" -->
+          <p class="display-6">Sabor que vem da grelha.<br>
+            Alma que vem da casa.</p>
+        </div>
+        <div class="col-md d-none d-sm-block text-center"> <!-- esconde a imagem em telas menores que MD e text-center alinha a img ao centro da col -->
+          <img class="w-100" src="src/lanche.png" alt="">
+        </div> 
+
+      </div>
+    </div>
+
+    <!-- APRESENTAÇÃO FIM -->
+
+
     <!-- SOBRE INICIO -->
     <div id="sobre" class="container mt-5">
         <!-- div.row>div.col-12.col-md-6*2 -->
-        <div class="row">
-          <div class="col-12 col-md-6">
+        <div class="row my-3">
+          <div class="col-12 col-md-4">
             <!-- img.img-fluid.rounded -->
-            <img src="https://picsum.photos/600/500?random=7" alt="" class="img-fluid rounded">
+             <!-- "mx-auto d-block" centraliza a img -->
+            <img class="w-75 rounded float-start border border-3 border-light" src="src/sobre1.png">
           </div>
-          <div class="col-12 col-md-6 d-flex align-items-center text-light">
+          <div class="col-12 col-md-8 d-flex align-items-center text-light">
             <div>
-            <h2>Sobre nós</h2>
-            <p>Somos uma empresa de tecnologia voltada a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deleniti autem vitae aspernatur fugit nam!</p>
+            <h2 class="display-4">Sobre nós</h2>
+            <p>A Burguer House nasceu da paixão de três amigos por churrasco, hamburguer artesanal e aquele clima aconchegante e rústico do lanche caseiro. Começaram assando hamburgueres no quintal com uma grelha feita à mão e receitas passadas de geração em geração. </p>
             <hr>
-            <p>Somos uma empresa de tecnologia voltada a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deleniti autem vitae aspernatur fugit nam!</p>
             </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-12 col-md-8 d-flex align-items-center text-light">
+            <div>
+            <p>Na Burguer House, cada hambúrguer é grelhado no fogo de verdade, com ingredientes selecionados, pão artesanal e molhos feitos na casa. O ambiente rústico e acolhedor faz você se sentir em casa, enquanto experimenta sabores que você não encontra em qualquer lugar. O sucesso virou fila na calçada, e assim surgiu a ideia: transformar aquele quintal em um espaço rústico, acolhedor e cheio de sabor.</p>
+            <hr>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <!-- img.img-fluid.rounded -->
+            <img class="w-75 rounded float-end border border-3 border-light" src="src/sobre2.png" alt="">
           </div>
         </div>
       </div>
