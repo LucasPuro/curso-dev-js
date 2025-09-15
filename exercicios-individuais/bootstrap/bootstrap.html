@@ -19,20 +19,32 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav w-100 d-flex justify-content-evenly text-center navbar-nav-scroll " style="--bs-scroll-height: 300px; font-weight: bold;">
+              <!-- badges e buttons para o navbar -->
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#inicio">Início</a>
+                    <button type="button" class="btn btn-warning">
+                      <a href="#menu" class="link-dark fw-bold text-decoration-none">Início</a>
+                    </button>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#sobre">Sobre nós</a>
+                    <button type="button" class="btn btn-warning">
+                      <a href="#sobre" class="link-dark fw-bold text-decoration-none">Sobre Nós</a>
+                    </button>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#depoimentos">Depoimentos</a>
+                    <button type="button" class="btn btn-warning">
+                      <a href="#depoimentos" class="link-dark fw-bold text-decoration-none">Depoimentos</a>
+                    </button>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#cardapio">Cardápio</a>
+                    <button type="button" class="btn btn-warning">
+                      <a href="#cardapio" class="link-dark fw-bold text-decoration-none">Cardápio</a>
+                      <span class="badge text-bg-secondary">3</span>
+                    </button>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#contato">Contato</a>
+                    <button type="button" class="btn btn-warning">
+                      <a href="#contato" class="link-dark fw-bold text-decoration-none">Contato</a>
+                    </button>
                 </li>
             </ul>
           </div>
@@ -143,33 +155,48 @@
 
 
     <!-- CARDAPIO INICIO -->
-     <!-- div.container#cardapio>div.row>div.col*3>img+h4+h5+p -->
+     <!-- div.container#cardapio>div.row>div.col*3 -->
      <div id="cardapio" class="container">
       <div class="row">
         <h2 class="display-4 text-light text-center mt-5 mb-3">Cardápio</h2>
       </div>
       <div class="row text-light">
-        <div class="col-4 text-center">
-          <img src="src/cardapio1.png" class="w-50 border rounded border-2 border-light">
-          <h4 class="mt-1">Texano Raiz</h4>
-          <h5>R$ 39,90</h5>
-          <h6 class="my-0">Ingredientes</h6>
-          <p class="w-75 mx-auto">180g de carne de angus grelhada no carvão, cheddar maturado, bacon caramelizado, pão brioche selado na manteiga.</p>
+        <div class="col-4">
+          <div class="card p-0 text-center text-bg-secondary mx-auto">
+            <img src="src/cardapio1.png" class="mt-2 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">Texano Raiz</h5>
+              <h6 class="card-subtitle mb-2 text-body-light">R$ 39,90</h6>
+              <p class="card-text mb-0 fw-bold">Ingredientes</p>
+              <p class="card-text">180g de carne de angus grelhada no carvão, cheddar maturado, bacon caramelizado, pão brioche selado na manteiga.</p>
+              <a type="button" href="#contato" class="btn btn-warning">Peça Já!</a>
+            </div>
+          </div>
         </div>
-        <div class="col-4 text-center">
-          <img src="src/cardapio2.png" class="w-50 border rounded border-2 border-light">
-          <h4 class="mt-1">Caipira Flame</h4>
-          <h5>R$ 36,90</h5>
-          <h6 class="my-0">Ingredientes</h6>
-          <p class="w-75 mx-auto">Blend de frango defumado, queijo meia cura, vinagrete de pepino e salsinha, maionese de limão siciliano, pão rústico de milho</p>
+        <div class="col-4">
+          <div class="card p-0 text-center text-bg-secondary mx-auto">
+            <img src="src/cardapio2.png" class="mt-2 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">Caipira Flame</h5>
+              <h6 class="card-subtitle mb-2 text-body-light">R$ 36,90</h6>
+              <p class="card-text mb-0 fw-bold">Ingredientes</p>
+              <p class="card-text">Blend de frango defumado, queijo meia cura, vinagrete de pepino e salsinha, maionese de limão siciliano, pão rústico de milho.</p>
+              <a type="button" href="#contato" class="btn btn-warning">Peça Já!</a>
+           </div>
+          </div>
         </div>
-        <div class="col-4 text-center">
-          <img src="src/cardapio3.png" class="w-50 border rounded border-2 border-light">
-          <h4 class="mt-1">Veggie da Casa</h4>
-          <h5>R$ 34,90</h5>
-          <h6 class="my-0">Ingredientes</h6>
-          <p class="w-75 mx-auto">Hambúrguer de grão-de-bico, queijo vegano, alface americana, pimentão em tiras finas, molho verde da casa, pão integral artesanal.</p>
-          <!-- mx-auto centraliza horizontalmente com as margens -->
+        <div class="col-4">
+          <div class="card p-0 text-center text-bg-secondary mx-auto">
+            <img src="src/cardapio3.png" class="mt-2 mx-2">
+            <div class="card-body">
+              <h5 class="card-title">Veggie da Casa</h5>
+              <h6 class="card-subtitle mb-2 text-body-light">R$ 34,90</h6>
+              <p class="card-text mb-0 fw-bold">Ingredientes</p>
+              <p class="card-text">Hambúrguer de grão-de-bico, queijo vegano, alface americana, pimentão em tiras finas, molho verde da casa, pão integral artesanal.</p>
+              <a type="button" href="#contato" class="btn btn-warning">Peça Já!</a>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
      </div>
