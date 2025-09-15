@@ -9,7 +9,7 @@
 <body class="bg-dark">
     
     <!-- MENU INICIO -->
-    <nav id="inicio" class="navbar navbar-expand-md bg-dark navbar-dark">
+    <nav id="menu" class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
             <img src="src/logo.png" alt="Bootstrap" width="65" height="65">
@@ -26,13 +26,13 @@
                     <a class="nav-link text-warning" href="#sobre">Sobre nós</a>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#">Depoimentos</a>
+                    <a class="nav-link text-warning" href="#depoimentos">Depoimentos</a>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#">Cardápio</a>
+                    <a class="nav-link text-warning" href="#cardapio">Cardápio</a>
                 </li>
                 <li class="nav-item col-auto">
-                    <a class="nav-link text-warning" href="#">Contato</a>
+                    <a class="nav-link text-warning" href="#contato">Contato</a>
                 </li>
             </ul>
           </div>
@@ -42,21 +42,21 @@
 
 
     <!-- APRESENTAÇÃO INICIO -->
-
     <div id="inicio" class="container-fluid"> <!-- "-fluid" mantém a largura máxima em todos as telas -->
       <div class="row"> <!-- determina uma "linha" que receberá a imagem e o slogan -->
-        <div class="col-sm text-light text-center my-5 fw-bold fst-italic">
+        <div class="col-sm text-light text-center my-5 align-self-center fw-bold fst-italic">
+          <!-- align-self-center alinha o texto ao centro -->
           <h1 class="display-1">Burguer House</h1> <!-- display-1 torna o texto uma "manchete" -->
           <p class="display-6">Sabor que vem da grelha.<br>
             Alma que vem da casa.</p>
         </div>
-        <div class="col-md d-none d-sm-block text-center"> <!-- esconde a imagem em telas menores que MD e text-center alinha a img ao centro da col -->
+        <div class="col-md d-none d-sm-block text-center">
+          <!-- esconde a imagem em telas menores que MD e text-center alinha a img ao centro da col -->
           <img class="w-100" src="src/lanche.png" alt="">
         </div> 
 
       </div>
     </div>
-
     <!-- APRESENTAÇÃO FIM -->
 
 
@@ -64,12 +64,12 @@
     <div id="sobre" class="container mt-5">
         <!-- div.row>div.col-12.col-md-6*2 -->
         <div class="row my-3">
-          <div class="col-12 col-md-4">
+          <div class="col-4 col-md-2">
             <!-- img.img-fluid.rounded -->
-             <!-- "mx-auto d-block" centraliza a img -->
-            <img class="w-75 rounded float-start border border-3 border-light" src="src/sobre1.png">
+            <!-- "mx-auto d-block" centraliza a img -->
+            <img class="w-100 rounded float-start border border-3 border-light" src="src/sobre1.png">
           </div>
-          <div class="col-12 col-md-8 d-flex align-items-center text-light">
+          <div class="col-12 col-md-10 d-flex align-items-center text-light">
             <div>
             <h2 class="display-4">Sobre nós</h2>
             <p>A Burguer House nasceu da paixão de três amigos por churrasco, hamburguer artesanal e aquele clima aconchegante e rústico do lanche caseiro. Começaram assando hamburgueres no quintal com uma grelha feita à mão e receitas passadas de geração em geração.</p>
@@ -78,48 +78,171 @@
           </div>
         </div>
         <div class="row my-3">
-          <div class="col-12 col-md-8 d-flex align-items-center text-light">
+          <div class="col-12 col-md-10 d-flex align-items-center text-light">
             <div>
             <p>Na Burguer House, cada hambúrguer é grelhado no fogo de verdade, com ingredientes selecionados, pão artesanal e molhos feitos na casa. O ambiente rústico e acolhedor faz você se sentir em casa, enquanto experimenta sabores que você não encontra em qualquer lugar. O sucesso virou fila na calçada, e assim surgiu a ideia: transformar aquele quintal em um espaço rústico, acolhedor e cheio de sabor.</p>
             <hr>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-1 col-md-2 d-none d-sm-block">
             <!-- img.img-fluid.rounded -->
-            <img class="w-75 rounded float-end border border-3 border-light" src="src/sobre2.png" alt="">
+            <img class="w-100 rounded float-end d-none d-md-block border border-3 border-light" src="src/sobre2.png" alt="">
           </div>
         </div>
       </div>
-
-
-
-
-
-
     <!-- SOBRE FIM -->
 
 
     <!-- DEPOIMENTOS INICIO -->
+    <!-- div.container>div.row*3>div.col*2>img+p -->
+    <!-- perguntar como inserir img em uma col e p em outra, multiplicando -->
+     <div id="depoimentos" class="container mt-5">
+      <div class="row">
+        <h2 class="display-4 text-light text-center mb-5">Depoimentos</h2>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img src="src/profile1.jpg" class="img-thumbnail rounded-circle">
+        </div>
+        <div class="col-11">
+          <p class="bg-light p-1 text-light d-md-inline d-block rounded bg-opacity-10"> 
+            <!-- d-md-inline e d-block variam a caixa de texto entre tamanhos de tela -->
+            Ambiente incrível, atendimento nota 10 e o melhor hamburguer que já comi na vida!
+          </p>
+          <p class="text-light mt-1 mb-0 ms-2">Lucas M.</p>
+          <p class="text-warning mt-0 ms-2">★★★★★</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-11 text-end"> <!-- text-end joga o conteúdo para a direita -->
+          <p class="bg-light p-1 text-light d-md-inline d-block rounded bg-opacity-10">
+            Simplesmente viciante! Já é meu lugar favorito na cidade e levo todos os meus amigos para conhecer.
+          </p><br>
+          <p class="text-light mt-1 mb-0 me-2">Camila R.</p>
+          <p class="text-warning mt-0 me-2">★★★★★</p>
+        </div>
+        <div class="col-1">
+          <img src="src/profile2.jpg" class="img-thumbnail rounded-circle">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <img src="src/profile3.jpg" class="img-thumbnail rounded-circle">
+        </div>
+        <div class="col-11">
+          <p class="bg-light p-1 text-light d-md-inline d-block rounded bg-opacity-10">
+            Simplesmente viciante! Já é meu lanche favorito na cidade.
+          </p>
+          <p class="text-light mt-1 mb-0 ms-2">João P.</p>
+          <p class="text-warning mt-0 ms-2">★★★★★</p>
+        </div>
+      </div>
+     </div>
 
     <!-- DEPOIMENTOS FIM -->
 
 
     <!-- CARDAPIO INICIO -->
-
+     <!-- div.container#cardapio>div.row>div.col*3>img+h4+h5+p -->
+     <div id="cardapio" class="container">
+      <div class="row">
+        <h2 class="display-4 text-light text-center mt-5 mb-3">Cardápio</h2>
+      </div>
+      <div class="row text-light">
+        <div class="col-4 text-center">
+          <img src="src/cardapio1.png" class="w-50 border rounded border-2 border-light">
+          <h4 class="mt-1">Texano Raiz</h4>
+          <h5>R$ 39,90</h5>
+          <h6 class="my-0">Ingredientes</h6>
+          <p class="w-75 mx-auto">180g de carne de angus grelhada no carvão, cheddar maturado, bacon caramelizado, pão brioche selado na manteiga.</p>
+        </div>
+        <div class="col-4 text-center">
+          <img src="src/cardapio2.png" class="w-50 border rounded border-2 border-light">
+          <h4 class="mt-1">Caipira Flame</h4>
+          <h5>R$ 36,90</h5>
+          <h6 class="my-0">Ingredientes</h6>
+          <p class="w-75 mx-auto">Blend de frango defumado, queijo meia cura, vinagrete de pepino e salsinha, maionese de limão siciliano, pão rústico de milho</p>
+        </div>
+        <div class="col-4 text-center">
+          <img src="src/cardapio3.png" class="w-50 border rounded border-2 border-light">
+          <h4 class="mt-1">Veggie da Casa</h4>
+          <h5>R$ 34,90</h5>
+          <h6 class="my-0">Ingredientes</h6>
+          <p class="w-75 mx-auto">Hambúrguer de grão-de-bico, queijo vegano, alface americana, pimentão em tiras finas, molho verde da casa, pão integral artesanal.</p>
+          <!-- mx-auto centraliza horizontalmente com as margens -->
+        </div>
+      </div>
+     </div>
     <!-- CARDAPIO FIM -->
 
 
     <!-- CONTATO INICIO -->
+     <!-- div.container#contato>div.row>div.col*2 -->
+      <div class="container" id="contato">
+        <div class="row">
+        <h2 class="display-4 text-light text-center mt-5 mb-3">Contato</h2>
+        </div>
+        <div class="row">
+          <div class="col-5 text-light">
+            <h5 class="mb-5">Utilize o formulário ao lado para nos enviar uma mensagem ou nos acione pelas redes sociais!</h5>
+            <p class="mb-0 mt-3">SAC</p>
+            <p class="mb-0">houseburguerpp@gmail.com</p>
+            <p class="mb-5">(18) 12345-6789</p>
+            <div class="row">
+              <!-- div.col-3*4>img -->
+              <div class="col-3 col-sm-2">
+                  <img src="src/contatos/whats.png" class="w-50">
+              </div>
+              <div class="col-3 col-sm-2">
+                  <img src="src/contatos/insta.png" class="w-50">
+              </div>
+              <div class="col-3 col-sm-2">
+                  <img src="src/contatos/google.png" class="w-50">
+              </div>
+              <div class="col-3 col-sm-2">
+                  <img src="src/contatos/ifood.png" class="w-50 align-middle">
+              </div>
+            </div>
+            <p class="mb-0 mt-5">Endereço</p>
+            <p class="my-0">R. Washington Luís, 1010, Centro.</p>
+            <p>Presidente Prudente, SP</p>
+            <p class="my-3">CNPJ 10.200.300/0001-10</p>
+          </div>
 
+          <div class="col-7 text-light">
+              <!-- input nome, email, assunto e mensagem -->
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="form_nome" placeholder="Digite seu nome">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="form_email" placeholder="Informe seu e-mail">
+              </div>
+              <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto</label>
+                <input type="text" class="form-control" id="form_assunto" placeholder="Qual o assunto de seu contato?">
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="form_mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+              </div>
+              <button type="button" class="btn btn-success mb-3">Enviar</button>
+          </div>
+        </div>
+      </div>
     <!-- CONTATO FIM -->
 
 
-
-
-
-
-
-
+    <!-- BOTÂO VOLTAR INICIO -->
+    <div class="position-fixed bottom-0 end-0 p-3">
+      <!-- botão fixado no canto inferior direito -->
+      <a href="#menu" class="btn btn-warning rounded-5" role="button">
+        <!-- link para o início, com classe botão, cor amarela e borda arredondada -->
+        <h4 class="fw-bolder">⇧</h4>
+      </a>
+    </div>
+    <!-- BOTÃO VOLTAR FIM -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
