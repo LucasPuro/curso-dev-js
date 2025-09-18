@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Operadores JS</title>
+</head>
+<body>
+    
+    <p>Aperte F12 paraver os resultados</p>
+
+    <script>
+
+        // VARIÁVEIS
+
+            //var consegue substituir a variável e o valor globalmente
+                var exemploVar = "Lucas"
+                exemploVar = "João"
+                var exemploVar = "Pedro"
+                console.log(exemploVar)
+
+            //let não permite redeclaração da variável no mesmo bloco, somente alterar valor
+                let exemploLet = 25
+                exemploLet = 30
+                // let exemploLet = 10 (não permite)
+
+            //const não permite alterar no mesmo bloco e nem alterar o valor
+                const exemploConst = 1.50
+                // exemploConst = 2.20
+                // const exemploConst = 2.20
+        
+        console.log("_".repeat(20)) //Repete as linhas
+
+        // TIPOS DE DADOS
+
+            //String - Texto
+                const nome = "Lucas"
+                const sobrenome = 'Puro'
+                const multiplasLinhas = `Linha1
+                Linha2
+                Linha3`
+                console.log(nome)
+                console.log(nome,sobrenome)
+                console.log(nome+" "+sobrenome)
+                console.log("nome") //não usa variável, exibe texto
+                console.log(`${nome} --- ${sobrenome}`)
+
+            //Numbers - Números
+                const idade = 25
+                const altura = 1.80
+                const temperatura = -10.2
+                console.log(idade,altura,temperatura)
+
+            //Booleans - Bool
+                const ativo = true
+                const inativo = false
+                const maiorIdade = 18 > idade
+                console.log(maiorIdade)
+
+            //Null e Undefined
+                let valorNull = null
+                let valorIndefinido 
+                valorIndefinido = 10
+                console.log(valorIndefinido)
+
+        console.log("_".repeat(20))
+
+        // OPERADORES ARITMÉTICOS
+            const a = 2
+            const b = 4
+
+            //PEMDAS (Parenteses;Expoentes;Multiplicação;Divisão;Adição;Subtração)
+                console.log(a+b)
+                console.log(a-b)
+                console.log(a*b)
+                console.log(a/b)
+                console.log(a%b)
+                console.log(a**b)
+
+            //Incremento e Decremento
+                let contador = 10
+                console.log(contador)
+                console.log(++contador)//adiciona e depois exibe
+                console.log(contador++)//exibe e depois adiciona
+                console.log(contador)
+
+                console.log(contador)
+                console.log(--contador)//subtrai e depois exibe
+                console.log(contador--)//exibe e depois subtrai
+                console.log(contador)
+
+        console.log("_".repeat(20))
+
+        // OPERADORES DE ATRIBUIÇÃO
+            let num = 10
+
+            //num = num + 5  ~> Soma o valor à variável
+                num += 5
+                console.log(num)
+
+                num -= 5
+                console.log(num)
+
+                num *= 5
+                console.log(num)
+
+                num /= 5
+                console.log(num)
+
+        console.log("_".repeat(20))
+
+        // OPERADORES DE COMPARAÇÃO
+            const x = 5
+            const y = "5"
+            const z = 10
+
+                console.log(x == y)//se valor é igual
+                console.log(x === y)//se valor E tipo são iguais
+                console.log(x > z)
+                console.log(x <= z)
+
+        console.log("_".repeat(20))
+
+        // OPERADORES LÓGICOS
+            // || (ou) && (e) ! (diferente)
+            const temIdade = true
+            const temCNH = false
+            const temDinheiro = false
+            const temCarro = true
+
+                //A pessoa vai dirigir (todas verdadeiros)
+                console.log(temIdade && temCNH && temDinheiro && temCarro)
+                
+                //A pessoa vai dirigir (uma é verdadeira)
+                console.log(temIdade || temCNH || temDinheiro || temCarro)
+
+                //Torna true em falso
+                console.log(!temIdade)
+                
+        console.log("_".repeat(20))
+        
+        // CONVERSÕES DE TIPO
+
+            //Implícitas
+                console.log("5" + 5) //Concatenou em string
+                console.log(5 + "5")
+                console.log("5" - 5) //Converte em número, única operação possível
+                console.log("5" * 5)
+
+            //Explícitas
+
+                //String para Number
+                    const textoNumero = "42.7"
+                    console.log(parseFloat(textoNumero)) //Converte para decimal
+                    console.log(parseInt(textoNumero)) //Converte para Int
+                    console.log(Number(textoNumero)) //Converte como está, somente número
+                    console.log(parseFloat("42px"))
+                    console.log(Number("42px"))
+
+                //Number para String
+                    const numeroTexto = 123.50
+                    console.log(String(numeroTexto))
+                    console.log(numeroTexto.toString())
+                    console.log(""+numeroTexto)
+
+                //Number/String para Boolean
+                    console.log(Boolean(1)) //True
+                    console.log(Boolean(0)) //False
+                    console.log(Boolean("")) //False
+                    console.log(Boolean("Lucas")) //True
+
+        console.log("_".repeat(20))
+
+        // VERIFICAÇÃO DE TIPO
+            const numeroPositivo = 10
+            const nomeCompleto = "Lucas Puro"
+                console.log(typeof numeroPositivo) //Exibe number
+                console.log(typeof nomeCompleto) //Exibe string          
+                
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Operadores</title>
+</head>
+<body>
+    
+    <p>Aperte F12 para visualizar os resultados</p>
+
+    <script>
+
+        function exercicio1(){
+            const numero1 = Number(prompt("Informe um número"))
+            const numero2 = Number(prompt("Informe outro número"))
+            console.log(numero1+numero2)
+            console.log(numero1-numero2)
+            console.log(numero1*numero2)
+            console.log(numero1/numero2)
+        }
+        //exercicio1()
+
+
+        function exercicio2(){
+            let numero = Number(prompt("Informe um número"))
+            console.log(`O número informado foi ${numero}, seu antecessor é ${numero-1} e seu sucessor é ${numero+1}`)
+        }
+        //exercicio2()
+
+        function exercicio6(){
+            let carteira = parseFloat(prompt("Informe o valor em carteira:"))
+            let carteiraDolar = carteira / 5.31
+            console.log(`Seu valor em carteira é de ${(carteira/5.31).toFixed(2)} USD`)
+        }
+        exercicio6()
+
+        function exercicio7(){
+            let valorProduto = parseFloat(prompt("Informe o valor do produto para receber seu desconto:"))
+            let produtoDesconto = valorProduto * 0.95
+            console.log(`O valor do item informado, com desconto de 5%, é de: ${produtoDesconto}`)
+        }
+        //exercicio7()
+
+    </script>
+
+</body>
+</html>
