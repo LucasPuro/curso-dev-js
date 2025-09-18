@@ -11,6 +11,7 @@
 
     <script>
 
+        /* .:: EXERCÍCIO 1 ::. */
         function exercicio1(){
             const numero1 = Number(prompt("Informe um número"))
             const numero2 = Number(prompt("Informe outro número"))
@@ -22,25 +23,91 @@
         //exercicio1()
 
 
+        /* .:: EXERCÍCIO 2 ::. */
         function exercicio2(){
             let numero = Number(prompt("Informe um número"))
             console.log(`O número informado foi ${numero}, seu antecessor é ${numero-1} e seu sucessor é ${numero+1}`)
         }
         //exercicio2()
 
+
+        /* .:: EXERCÍCIO 3 ::. */
+        function exercicio3(){
+            let numero = Number(prompt("Informe um número inteiro"))
+            const dobro = numero * 2
+            const triplo = numero * 3
+            const raiz = Math.sqrt(numero) //Math.sqrt(var) retorna a raiz quadrada
+            console.log(`O número informado foi ${numero}. Seu dobro é ${dobro}, seu triplo é ${triplo} e sua raiz quadrada é ${raiz}.`)
+        }
+        //exercicio3()
+
+
+        /* .:: EXERCÍCIO 4 ::. */
+        function exercicio4(){
+           const nota1 = parseFloat(prompt("Informe a primeira nota:")) 
+           const nota2 = parseFloat(prompt("Informe a segunda nota:")) 
+           const nota3 = parseFloat(prompt("Informe a terceira nota:")) 
+           const media = (nota1 + nota2 + nota3) / 3
+           console.log(`Considerando as notas ${nota1 + ", " + nota2 + " e " + nota3}, sua média final é de ${media.toFixed(1)}.`)
+        }
+        //exercicio4()
+
+
+        /* .:: EXERCÍCIO 5 ::. */
+        function exercicio5(){
+            const metros = parseFloat(prompt("Informe uma medida em metros, utilizando ponto para separar decimais."))
+            const cm = (metros * 100).toFixed(2)
+            const mm = (metros * 1000).toFixed(0)
+            console.log(`A distância em metros informada (${metros} m) equivale à ${cm} cm ou ${mm} mm.)`)
+        }
+        //exercicio5()
+
+
+        /* .:: EXERCÍCIO 6 ::. */
         function exercicio6(){
             let carteira = parseFloat(prompt("Informe o valor em carteira:"))
             let carteiraDolar = carteira / 5.31
             console.log(`Seu valor em carteira é de ${(carteira/5.31).toFixed(2)} USD`)
         }
-        exercicio6()
+        //exercicio6()
 
+
+        /* .:: EXERCÍCIO 7 ::. */
         function exercicio7(){
             let valorProduto = parseFloat(prompt("Informe o valor do produto para receber seu desconto:"))
             let produtoDesconto = valorProduto * 0.95
             console.log(`O valor do item informado, com desconto de 5%, é de: ${produtoDesconto}`)
         }
         //exercicio7()
+        
+
+        /* .:: EXERCÍCIO 8 ::. */
+        function exercicio8(){
+            const idade = Number(prompt("Informe sua idade:"))
+            console.log(`O usuário é maior de idade? ${idade >= 18}`)
+        }
+        //exercicio8()
+
+
+        /* .:: EXERCÍCIO 9 ::. */
+        function exercicio9(){
+            const largura = parseFloat(prompt("Informe a largura da parede em metros:"))
+            const altura = parseFloat(prompt("Informe a altura da parede em metros:"))
+            const areaParede = largura * altura
+            const tinta = areaParede / 2
+            console.log(`Considerando uma parede de ${altura + "x" + largura} m, sua área é de ${areaParede} m2 e a quantidade de tinta necessária para pintá-la é de ${tinta} L`)
+        }
+        //exercicio9()
+
+
+        /* .:: EXERCÍCIO 10 ::. */
+        function exercicio10(){
+            const peso = parseFloat(prompt("Informe seu peso em kg:"))
+            const altura = parseFloat(prompt("Informe sua altura em metros:"))
+            const IMC = peso / (altura^2)
+            console.log(`Seu IMC é de ${IMC}`)
+        }
+        //exercicio10()
 
     </script>
 
