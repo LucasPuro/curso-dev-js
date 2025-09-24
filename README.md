@@ -8,7 +8,17 @@ curso-dev-js
 ├── atividades-praticas  
 │   └── prototipo
 │   └── html
-│   └── (atividades em grupo ou da aula)  
+│   └── css  
+│   └── bootstrap  
+│   └── js  
 └── exercicios-individuais  
-      └── cmd  
-        └── atividade-cmd.txt  (primeira atividade enviada pelo Classroom)</pre>
+    └── cmd  
+    └── git  
+    └── html
+    └── requisitos
+    └── js
+        └── operadores
+    └── bootstrap  
+        └── src
+            └── contatos
+        </pre>
