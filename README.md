@@ -3,7 +3,8 @@ _Este repositório será utilizado ao longo do curso para atividades de JavaScri
 ---
 A estrutura de pastas deste repositório está definida da seguinte maneira:
 curso-dev-js  
-<pre>├── README.md  
+<pre>
+├── README.md  
 ├── pesquisa.txt (informações relevantes sobre JS)  
 ├── atividades-praticas  
 │   └── prototipo
@@ -17,8 +18,8 @@ curso-dev-js
     └── html
     └── requisitos
     └── js
-        └── operadores
+    │   └── operadores
     └── bootstrap  
         └── src
             └── contatos
-        </pre>
+</pre>
