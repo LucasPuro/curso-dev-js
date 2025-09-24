@@ -69,10 +69,6 @@
             const valorDolar = valorReal / 5.35
             resultado.textContent = `Valor em dólar: ${valorDolar.toFixed(2)}`
         })
-        //EXEMPLO SEM VARIÁVEL
-        /*document.querySelector("#btn-converter").addEventListener('click',function(){
-            document.querySelector("resultado").textContent = (Number(document.querySelector("#valor-real").value) / 5.35).toFixed(2)
-        })*/
 
         //EXERCICIO 2
         const preco = document.querySelector("#preco")
@@ -86,11 +82,7 @@
             resultadoDesconto.textContent = `Valor após o desconto: R$ ${valorFinal.toFixed(2)}`
         })
 
-        //EXERCICIO 3
-        // peso
-        // altura
-        // btn-calcular-imc
-        // resultado_imc
+        //EXERCICIO 3 (sem variável conforme o exemplo)
         document.querySelector("#btn-calcular-imc").addEventListener('click',function(){
             document.querySelector("#resultado_imc").textContent = (Number(document.querySelector("#peso").value) / ((Number(document.querySelector("#altura").value)) ^ 2)).toFixed(1)
         })
