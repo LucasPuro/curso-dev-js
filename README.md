@@ -7,18 +7,18 @@ curso-dev-js
 ├── README.md  
 ├── pesquisa.txt (informações relevantes sobre JS)  
 ├── atividades-praticas  
-│   └── prototipo
-│   └── html
-│   └── css  
-│   └── bootstrap  
+│   ├── prototipo
+│   ├── html
+│   ├── css  
+│   ├── bootstrap  
 │   └── js  
 └── exercicios-individuais  
-    └── cmd  
-    └── git  
-    └── html
-    └── requisitos
-    └── js
-    ┝   └── operadores
+    ├── cmd  
+    ├── git  
+    ├── html
+    ├── requisitos
+    ├── js
+    │   └── operadores
     └── bootstrap  
         └── src
             └── contatos
