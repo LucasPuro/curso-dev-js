@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Condicionais </title>
+</head>
+<body>
+
+    <p>Aperte F12 para visualizar os resultados</p>
+
+    <script>
+
+    // EXERCÍCIO 1  ----------------------------------------------------
+
+    // EXERCÍCIO 2  ----------------------------------------------------
+
+    // EXERCÍCIO 3  ----------------------------------------------------
+        function exercicio3(){
+            const numero = Number(prompt("Informe um número inteiro:"))
+            if (numero % 2 == 0){
+                console.log("O número é par!")
+            } else{
+                console.log("O número é ímpar!")
+            }
+        }
+
+    // EXERCÍCIO 4  ----------------------------------------------------
+        function exercicio4(){
+            const valor = Number(prompt("Informe o valor da compra:"))
+            if (valor > 200){
+                console.log("O frete será grátis!")
+            } else if(valor >= 100 && valor < 200){
+                console.log("O frete será de R$ 15,00!")
+            } else if(valor > 0 && valor < 100){
+                console.log("O frete será de R$ 25,00!")
+            } else{
+                console.log("Valor inválido!")
+            }
+        }
+
+    // EXERCÍCIO 5  ----------------------------------------------------
+
+    // EXERCÍCIO 6  ----------------------------------------------------
+
+    // EXERCÍCIO 7  ----------------------------------------------------
+
+    // EXERCÍCIO 8  ----------------------------------------------------
+
+    // EXERCÍCIO 9  ----------------------------------------------------
+        function exercicio9(){
+            const salario = Number(prompt("Informe seu salário:"))
+            const anosDeServico = Number(prompt("Informe o tempo de serviço que possui na empresa em anos:"))
+            const bonus = (salario * 0.05).toFixed(2)
+            if (anosDeServico >= 5){
+                console.log(`Você possui 5 ou mais anos de empresa, tendo direito à um bônus de R$ ${bonus}!`)
+            } else if(anosDeServico >= 0 && anosDeServico < 5){
+                console.log("Devido ao tempo de serviço ser inferior à 5 anos, você ainda não receberá bônus por experiência!")
+            } else{
+                console.log("Dados inválidos!")
+            }
+        }
+
+    // EXERCÍCIO 10 ----------------------------------------------------
+        function exercicio10(){
+            const idade = Number(prompt("Informe sua idade em anos:"))
+            const peso = Number(prompt("Informe seu peso em kg:"))
+            const resfriado = prompt("Está resfriado no momento? (Responder com S/N)")
+            if ((idade >= 18 && idade <= 69) && (peso >= 50) && ((resfriado === "N") || (resfriado === "n"))){
+                console.log("Você pode doar sangue!")
+            } else{
+                console.log("Você não atende aos requisitos!")
+            }
+        }
+    </script>
+</body>
+</html>

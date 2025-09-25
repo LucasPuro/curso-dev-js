@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Condicionais</title>
+</head>
+<body>
+
+    <p>Aperte F12 para ver as respostas!</p>
+
+
+
+    <script>
+
+        // IF, ELSE, ELSE IF, SWITCH
+
+        const idade = 18
+
+        // IF (CONDICAO) { }
+        if (idade >= 18){
+            console.log("Maior de idade!")
+        }
+
+        if (idade >= 18){
+            console.log("Maior de idade!")
+        } else{ //Else sempre é a negação do IF
+            console.log("Menor de idade!")
+        }
+// ------------------------------------------------------------
+        // ELSE IF (CONDICAO, OU)
+        nota = 80
+        if (nota >= 0 && nota <= 100){ // && = AND
+            if (nota >= 90){
+                console.log("Ótimo!")
+            } else if(nota >= 60 && nota < 90){
+                console.log("Bom!")
+            } else if(nota >= 30 && nota < 60){
+                console.log("Precisa melhorar!")
+            } else{
+                console.log("Reprovado!")
+            }   
+        } else{
+            console.log("Nota inválida!")
+        }
+
+
+// ------------------------------------------------------------
+        // TERNÁRIOS
+        // CONDICAO ? VERDADEIRO : FALSO
+        console.log(idade >= 18 ? "Maior de idade!" : "Menor de idade!") 
+        console.log(nota >= 0 && nota <= 100 ? (nota >= 90 ? "Ótimo!" : nota >= 60 && nota < 90 ? "Bom!" : nota >= 30 && nota < 60 ? "Precisa melhorar!" : "Reprovado") : "Nota inválida")
+        /* Indentado:
+        console.log(
+            nota >= 0 && nota <= 100 ? (nota >= 90 ? "Ótimo!" 
+            : nota >= 60 && nota < 90 ? "Bom!" 
+            : nota >= 30 && nota < 60 ? "Precisa melhorar!" 
+            : "Reprovado") 
+        : "Nota inválida"
+        )
+        */
+
+        const nome = ""
+        if (nome){
+            console.log(nome)
+        } else{
+            console.log("Nome não digitado!")
+        }
+
+
+// ------------------------------------------------------------
+        // SWITCH
+        // 1 - Domingo, 2 - Segunda, 3 - Terça... 7 - Sábado
+        const dia = 2
+
+        switch (dia){
+            case 1: // dia === 1
+                console.log("Domingo")
+            case 2:
+                console.log("Segunda")
+            case 3:
+                console.log("Terça")
+            case 4:
+                console.log("Quarta")
+            case 5:
+                console.log("Quinta")
+            case 6:
+                console.log("Sexta")
+            case 7:
+                console.log("Sábado")
+                break //Interrompe o código
+            default:
+                console.log("Dia Inválido!")
+        }
+// ------------------------------------------------------------
+        switch (dia){
+            case 1: // dia === 1
+            case 7:
+                console.log("Final de Semana")
+                break
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                console.log("Semana")
+                break
+            default:
+                console.log("Dia Inválido!")
+        }
+// ------------------------------------------------------------
+        const idade2 = 15
+        
+        switch (true){
+            case (idade2 < 12): console.log ("Criança")
+                break
+            case (idade2 >= 12 && idade2 < 18): console.log ("Adolescente")
+                break
+            case (idade2 >= 18 && idade2 < 60): console.log("Adulto")
+                break
+            case (idade2 >= 60 && idade2 < 150): console.log("Idoso")
+                break
+            default:
+                console.log("Idade inválida!")
+        }
+
+
+// ------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

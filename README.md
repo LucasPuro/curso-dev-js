@@ -18,7 +18,8 @@ curso-dev-js
     ├── html
     ├── requisitos
     ├── js
-    │   └── operadores
+    │   ├── operadores
+        └── condicionais
     └── bootstrap  
         └── src
             └── contatos
