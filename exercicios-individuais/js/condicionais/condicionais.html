@@ -78,7 +78,7 @@
         function exercicio6(){
             const peso = Number(prompt("Informe seu peso em kg:"))
             const altura = Number(prompt("Informe sua altura em metros (ex.: 1.65)"))
-            const imc = peso / (altura ^ 2)
+            const imc = peso / (altura ** 2)
             if(imc >= 30){
                 console.log("Classificado como: Obesidade")
             } else if(imc < 30 && imc >= 25){
