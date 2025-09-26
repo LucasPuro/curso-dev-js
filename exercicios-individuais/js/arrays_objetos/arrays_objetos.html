@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Arrays e Objetos JS</title>
+</head>
+<body>
+
+    <p>Aperte F12 para visualizar os resultados!</p>
+
+    <script>
+    /*__________________________.:| EXERCÍCIO 1 |:.__________________________*/
+        function exercicio1(){
+            const playlist = ["Pieces - Sum 41", "Sangue Latino - Secos & Molhados", "Wind - Akeboshi"]
+            console.log(playlist[0])
+            playlist.push("Mitternacht - E Nomine")
+            playlist.pop()
+            console.log(playlist.length)
+        }
+        exercicio1()
+    
+    /*__________________________.:| EXERCÍCIO 2 |:.__________________________*/
+        function exercicio2(){
+            const filme = {
+                titulo : "Dracula Untold",
+                ano : 2014,
+                diretor : "Gary Shore",
+            }
+            console.log(`O filme ${filme.titulo}, dirigido por ${filme.diretor}, foi lançado em ${filme.ano}.`)
+            filme.personagens = ["Dracula", "Vlad Tepes", "Mirena"]
+            console.log(filme.personagens[0])
+            console.log(filme)
+        }
+        exercicio2()
+    </script>
+
+</body>
+</html>
