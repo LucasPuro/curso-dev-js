@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Arrays e Objetos</title>
+</head>
+<body>
+    
+    <p>Aperte F12 para ver os resultados</p>
+
+    <script>
+    /*.::-::-::-::-::-::-::-::-::ARRAYS E OBJETOS::-::-::-::-::-::-::-::-::-::.*/
+
+    /*__________________________.:| ARRAYS |:.__________________________*/
+        const frutas = ["Maçã", "Banana", "Uva", "Laranja", "Pera"]
+        console.log(frutas) // Lista o array
+        console.log(frutas.length) // Mostra o tamanho do array
+
+        // Acessar informações
+        console.log(frutas[3]) // Posição 3
+        console.log(frutas[0]) // Posição 0
+        console.log(frutas[frutas.length - 1]) // Exibe o último item do array
+
+        // Adicionar item
+        frutas.push("Abacaxi") // Adiciona um item ao final
+        frutas.unshift("Pêssego") // Adiciona um item no início, posição 0
+
+        // Alterar item
+        frutas[4] = "Jaca" // Altera o item diretamente em sua posição
+
+        // Excluir item
+        frutas.pop() // Remove o último item
+        frutas.shift() // Remove o primeiro item
+
+        // Remover, alterar ou adicionar itens (splice(Y,X,Z))
+        frutas.splice(1,1) // Remove/add X itens após o item Y ou até add um item Z no lugar
+
+        // Deletar itens
+        delete frutas[1] // Remove o item mas mantém o lugar na lista como vazio
+
+        // Exibir
+        console.log(frutas.slice(2)) // Exibe tudo a partir do item 2
+        console.log(frutas.slice(2, 5)) // Exibe tudo entre o item 2 e 5
+
+    /*__________________________.:| OBJETOS |:._________________________*/
+        const pessoa = {
+            nome : "Lucas",
+            idade : 27,
+            altura : 1.71,
+            amigos : ["Lara", "Jéssica"]
+        }
+
+        console.log(pessoa)
+        console.log(pessoa["nome"])
+        console.log(pessoa.nome)
+        console.log(pessoa["amigos"][0])
+
+        // Inserir/Alterar
+        pessoa.cidade = "Presidente Prudente" 
+        console.log(pessoa) // Se não existe >> Insere
+        pessoa.cidade = "Regente"
+        console.log(pessoa) // Se existe >> Altera
+
+        // Excluir
+        delete pessoa.cidade
+        console.log(pessoa)
+
+
+
+
+    </script>
+
+</body>
+</html>
