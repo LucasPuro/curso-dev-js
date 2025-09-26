@@ -59,7 +59,7 @@
 
     <script>
 
-        //EXERCICIO 1
+    /*__________________________.:| EXERCÍCIO 1 |:.__________________________*/
         const valorEmReal = document.querySelector("#valor-real")
         const btnConverter = document.querySelector("#btn-converter")
         const resultado = document.querySelector("#resultado")
@@ -70,7 +70,7 @@
             resultado.textContent = `Valor em dólar: ${valorDolar.toFixed(2)}`
         })
 
-        //EXERCICIO 2
+    /*__________________________.:| EXERCÍCIO 2 |:.__________________________*/
         const preco = document.querySelector("#preco")
         const desconto = document.querySelector("#desconto")
         const btnCalcularDesconto = document.querySelector("#btn-calcular-desconto")
@@ -82,7 +82,8 @@
             resultadoDesconto.textContent = `Valor após o desconto: R$ ${valorFinal.toFixed(2)}`
         })
 
-        //EXERCICIO 3 (sem variável conforme o exemplo em aula)
+    /*__________________________.:| EXERCÍCIO 3 |:.__________________________*/
+        //(sem variável conforme o exemplo em aula)
         document.querySelector("#btn-calcular-imc").addEventListener('click',function(){
             document.querySelector("#resultado_imc").textContent = (Number(document.querySelector("#peso").value) / ((Number(document.querySelector("#altura").value)) ^ 2)).toFixed(1)
         }) // Usar style.color = cor pode alterar a cor do resultado dentro de cada if
