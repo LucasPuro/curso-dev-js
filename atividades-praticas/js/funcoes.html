@@ -65,20 +65,24 @@
         buscarDados()
 
     /*__________________________.:| EXERCÍCIO 1 |:.__________________________*/
-        const calcularArea = (num1, num2) => num1 * num2;
-        function calcularArea2(num1, num2){
-            console.log(`A área calculada considerando a largura e altura informados é de ${num1 * num2}`)
-        }
-        calcularArea(10, 15)
-        calcularArea2(10, 15)
+        const calcArea = (largura, altura) => largura * altura
+        console.log(calcArea(10,15))
 
     /*__________________________.:| EXERCÍCIO 2 |:.__________________________*/
-        
+        function ehPar(numero){
+            return numero % 2 === 0 //retornaria um true se for par
+        }
 
+        ehPar = (numero) => numero % 2 === 0
+        console.log(ehPar(2))
 
     /*__________________________.:| EXERCÍCIO 3 |:.__________________________*/
+        const celsiusParaFahrenheit = temperaturaC => {
+            const calculo = (temperaturaC * 9/5) + 32
+            return calculo.toFixed(1)
+        }
 
-
+        console.log(celsiusParaFahrenheit(32))
 
     </script>
 
