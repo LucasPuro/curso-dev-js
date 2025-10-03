@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Aperte F12 para visualizar!
+
+    <script>
+    /*.::-::-::-::-::-::-::-::-::-:: FUNÇÕES ::-::-::-::-::-::-::-::-::-::-::.*/
+        // Função nomeada sem parâmetros
+        function saudacao(){
+            console.log("Olá, mundo!")
+        }
+        saudacao()
+
+        // Função nomeada com parâmetros
+        function somar(num1, num2){
+            console.log(num1 + num2)
+            // retorno
+            return num1 + num2 // tira um valor da função e devolve ao código
+        }
+        const soma = somar(2,4) // Cria uma variável usando a função somar
+        console.log(soma) // O valor sai da função e sai do console.log também.
+
+        // Função anônima
+        subtrair = function(num1, num2){
+            return num1 - num2
+        }
+        console.log(subtrair(10,2))
+
+
+        // Função anônima com arrow function
+        const multiplicar = (num1, num2) => {  // return explícito
+            return num1 * num2
+        }
+
+        const divisao = (num1, num2) => num1 / num2 // return implícito
+
+
+        // Função com parâmetro padrão ou opcional
+        function cumprimentar(nome = "Visitante"){
+            console.log(`Olá ${nome}`)
+        }
+        cumprimentar("Lucas")
+        cumprimentar()
+
+
+        // Função callback
+        function calcular(num1, num2, operacao){
+            return operacao(num1, num2)
+        }
+        console.log(2, 2, somar)
+        console.log(2, 2, multiplicar)
+
+
+        // Função assíncrona
+        async function buscarDados(){ //async espera o retorno para executar
+            const resposta = await fetch("https://brasilapi.com.br/api/feriados/v1/2025") //aguarda a resposta do acesso ou o retorno para continuar
+            const dados = await resposta.json() //converte o resultado para json(obj)
+            console.log(dados)
+        }
+        buscarDados()
+
+    /*__________________________.:| EXERCÍCIO 1 |:.__________________________*/
+        const calcularArea = (num1, num2) => num1 * num2;
+        function calcularArea2(num1, num2){
+            console.log(`A área calculada considerando a largura e altura informados é de ${num1 * num2}`)
+        }
+        calcularArea(10, 15)
+        calcularArea2(10, 15)
+
+    /*__________________________.:| EXERCÍCIO 2 |:.__________________________*/
+        
+
+
+    /*__________________________.:| EXERCÍCIO 3 |:.__________________________*/
+
+
+
+    </script>
+
+</body>
+</html>
