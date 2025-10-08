@@ -19,4 +19,10 @@ const inputPrazo = document.querySelector("#prazo-entrega")
 const inputDesconto = document.querySelector("#desconto")
 const checkboxDesign = document.querySelector("#inclui-design")
 
+const valorSubtotal = document.querySelector("#resumo-subtotal")
+const valorAdicional = document.querySelector("#resumo-adicional")
+const valorUrgencia = document.querySelector("#resumo-urgencia")
+const valorDesconto = document.querySelector("#resumo-desconto")
+const valorTotal = document.querySelector("#resumo-total")
+
 // Criar função puxando os quatro const e dando as informações para os outros campos
