@@ -6,11 +6,6 @@ OBJETIVOS
 .:
 .:Função principal organizadora
 ---------------------------------
-FÓRMULAS
-~> total-litros = distancia / consumo
-~> custo-total = litros * preco-litro
-~> custo-passageiro = custo-total / passageiros
----------------------------------
 INPUTS
 ~distancia
 ~consumo
@@ -21,6 +16,11 @@ RESULTADOS
 >total-litros
 >custo-total
 >custo-passageiro
+---------------------------------
+FÓRMULAS
+~> total-litros = distancia / consumo
+~> custo-total = litros * preco-litro
+~> custo-passageiro = custo-total / passageiros
 ---------------------------------*/
 
 document.querySelector(".seu-nome").textContent = "Lucas Puro Caminhoto"
@@ -37,4 +37,36 @@ const resultadoCustoTotal = document.querySelector("#custo-total")
 const resultadoCustoPassageiro = document.querySelector("#custo-passageiro")
 
 // Funções
-const calcularTotalLitros = (valor, porcentagem) => valor * (porcentagem/100)
+
+const calcularTotalLitros = (distancia, consumo) => distancia / consumo
+
+const calcularCustoTotal = (totalLitros, precoLitro) => totalLitros * precoLitro
+
+function gerarCustos(){
+    const distancia = Number(inputDistancia.value)
+    const consumo = Number(inputConsumo.value)
+    const precoLitro = Number(inputPrecoLitro.value)
+    const passageiros = Number(inputPassageiros.value)
+
+    const totalLitros = calcularTotalLitros(distancia, consumo).toFixed(1)
+    const custoTotal = calcularCustoTotal(totalLitros, precoLitro).toFixed(2)
+    const custoPassageiro = (custoTotal / passageiros).toFixed(2)
+
+    // const formatarValores = valor => {
+    //   return valor.toLocaleString("pt-BR", {
+    //      style: "currency",
+    //      currency: "BRL"
+    //   })
+    // }
+
+    resultadoTotalLitros.textContent = totalLitros + " L"
+    resultadoCustoTotal.textContent = "R$ " + custoTotal
+    resultadoCustoPassageiro.textContent = "R$ " + custoPassageiro
+}
+
+const todosInputs = [inputDistancia, inputConsumo, inputPrecoLitro, inputPassageiros]
+todosInputs.forEach(input => {
+    input.addEventListener('input', gerarCustos)
+})
+
+document.addEventListener('DOMContentLoaded', gerarCustos)
