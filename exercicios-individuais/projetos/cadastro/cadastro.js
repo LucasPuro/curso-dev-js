@@ -1,13 +1,13 @@
-// Array com os usuários
-    const usuarios = JSON.parse(localStorage.getItem("cadastro_usuarios")) || [] //Converte o JSON string em um objeto se existir, se não cria um array vazio
+/* ARRAY/USUÁRIOS |:._______________________________________________________________*/
+    let usuarios = JSON.parse(localStorage.getItem("cadastro_usuarios")) || [] //Converte o JSON string em um objeto se existir, se não cria um array vazio
 
-// Elementos
+/* ELEMENTOS |:.____________________________________________________________________*/
     const telaLista = document.querySelector("#tela-lista") //Tela de lista
     const telaCadastro = document.querySelector("#tela-cadastro") //Tela de add
     const btnAdicionar = document.querySelector("#btn-adicionar") //Botão de add
     const btnVoltar = document.querySelector("#btn-voltar-lista") //Botão de voltar
 
-// Inputs Usuário
+/* INPUTS/USUÁRIO |:._______________________________________________________________*/
     const inputId = document.querySelector("#user-id")
     const inputNome = document.querySelector("#user-nome")
     const inputSobrenome = document.querySelector("#user-sobrenome")
@@ -23,6 +23,8 @@
 
     const form = document.querySelector("#user-form")
     const tabelaCorpo = document.querySelector("#user-table-body")
+    let idEmEdicao = null //Facilita a edição
+    const formTitulo = document.querySelector("#form-titulo")
 
 // Exemplos de storage do navegador
     //sessionStorage.setItem("teste","Lucas") - Cria informação na sessão
@@ -32,16 +34,17 @@
 
 
 
-// Funções
+/* FUNÇÕES |:.______________________________________________________________________*/
 function mostrarTelaLista(){
     telaLista.classList.remove("d-none") //Remove a classe oculta do elemento Lista
     telaCadastro.classList.add("d-none") //Adiciona a classe oculta no elemento Cadasto
     renderizarTabela() //Renderiza a tabela ao mostrar a lista
 }
 
-function mostrarTelaCadastro(){
+function mostrarTelaCadastro(editar = false){ //Por padrão, a tela é de adicionar user e não de editar
     telaLista.classList.add("d-none") //Adiciona a classe oculta ao elemento Lista
     telaCadastro.classList.remove("d-none") //Remove a classe oculta do elemento Cadasto
+    formTitulo.textContent = editar ? "Editar Usuário" : "Adicionar Novo Usuário"
 }
 
 function salvarUsuario(){
@@ -63,20 +66,58 @@ function salvarUsuario(){
         nome, sobrenome, email, cep, rua, numero, complemento, bairro, cidade, estado, obs //Atribui tudo como elemento do objeto
     }
 
-    usuarios.push(usuario) //Manda o usuario para o array de usuarios
-    salvarNoStorage() //Chama a função que salvaria no storage
+    if (idEmEdicao){ //Se o idEmEdicao existe,
+        const index = usuarios.findIndex(user => user.id === idEmEdicao) //find traz o objeto, findindex traz somente a posição || Se localiza, retorna a posição, caso contrário retorna -1
+        if (index !== -1){
+            usuarios[index] = usuario //Pega o array de usuarios na posição X e substitui pelos dados em edição
+        }
+    } else{
+        usuarios.push(usuario) //Manda o usuario para o array de usuarios, como usuário novo
+    }
+    salvarNoStorage()
+    mostrarTelaLista()
+    idEmEdicao = null //Reseta o marcador de edição
+    form.reset() //Reseta os campos do formulário
 }
 
 function salvarNoStorage(){
     localStorage.setItem("cadastro_usuarios",JSON.stringify(usuarios)) //JSON.stringfy transforma o objeto em uma string
 }
 
-function editarUsuario(){
+function editarUsuario(id){
+    const user = usuarios.find(user => user.id === id) //Filter filtra e traz um novo array e find traz o item sem trabalhar com o array
+    if (!user) return
+
+    idEmEdicao = id //user.id
+
+    
+
+    inputId.value = user.id
+    inputNome.value = user.nome
+    inputSobrenome.value = user.sobrenome
+    inputEmail.value = user.email
+    inputCep.value = user.cep
+    inputRua.value = user.rua
+    inputNumero.value = user.numero
+    inputComplemento.value = user.complemento
+    inputBairro.value = user.bairro
+    inputCidade.value = user.cidade
+    inputEstado.value = user.estado
+    inputObs.value = user.obs
+
+    mostrarTelaCadastro(true)
+
+
 
 }
 
-function excluirUsuario(){
-
+function excluirUsuario(id){
+    if(confirm("Você tem certeza que deseja excluir esse usuário?")){ //Pede confirmação da ação
+        // console.log(id)
+        usuarios = usuarios.filter(user => user.id !== id) //Exclui o id que for diferente do array de users, salvando uma versão sem o id informado
+        salvarNoStorage() //Salva na memória local
+        renderizarTabela() //Exibe a tabela
+    }
 }
 
 function renderizarTabela(){
@@ -104,6 +145,22 @@ function inicializacao(){ //Manter por último
 
     form.addEventListener('submit', salvarUsuario) //Quando enviar os dados por submit, executa a função
     
+    tabelaCorpo.addEventListener('click', (event) =>{
+        const target = event.target.closest("button") //Clicando em algum lugar, busca o pai do item >> botão/mostra o ID
+        //console.log(target)
+        if (!target) return //!target se target for falso/nulo  = se existe um botão
+
+        const id = Number(target.dataset.id) //pega todos os atributos que são data.algumacoisa / recupera o id
+
+        if(isNaN(id)) return //true/false se o id for número
+        
+        if (target.classList.contains("btn-danger")){ //se, na lista de classes, contém danger
+            excluirUsuario(id)
+        } else if(target.classList.contains("btn-warning")){
+            editarUsuario(id)
+        }
+    })
+
     mostrarTelaLista() //Já inicia renderizando a tela de lista de usuarios
 }
 
