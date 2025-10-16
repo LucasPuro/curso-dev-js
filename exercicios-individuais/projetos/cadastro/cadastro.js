@@ -24,7 +24,11 @@
     const form = document.querySelector("#user-form")
     const tabelaCorpo = document.querySelector("#user-table-body")
     let idEmEdicao = null //Facilita a edição
+
     const formTitulo = document.querySelector("#form-titulo")
+    const btnBuscarCep = document.querySelector("#btn-buscar-cep")
+
+    const inputBusca = document.querySelector("#user-busca")
 
 // Exemplos de storage do navegador
     //sessionStorage.setItem("teste","Lucas") - Cria informação na sessão
@@ -39,12 +43,13 @@ function mostrarTelaLista(){
     telaLista.classList.remove("d-none") //Remove a classe oculta do elemento Lista
     telaCadastro.classList.add("d-none") //Adiciona a classe oculta no elemento Cadasto
     renderizarTabela() //Renderiza a tabela ao mostrar a lista
+    form.reset()
 }
 
 function mostrarTelaCadastro(editar = false){ //Por padrão, a tela é de adicionar user e não de editar
     telaLista.classList.add("d-none") //Adiciona a classe oculta ao elemento Lista
     telaCadastro.classList.remove("d-none") //Remove a classe oculta do elemento Cadasto
-    formTitulo.textContent = editar ? "Editar Usuário" : "Adicionar Novo Usuário"
+    formTitulo.textContent = editar === true ? "Editar Usuário" : "Adicionar Novo Usuário" //Se editar for true, coloca editar usuário, senão usa Add novo user
 }
 
 function salvarUsuario(){
@@ -139,12 +144,62 @@ function renderizarTabela(){
     })
 }
 
+async function buscarCEP(){ //async define que a função é assíncrona e precisa de um retorno
+    const cep = inputCep.value.replace(/\D/g,"") //replace troca tudo que não for número para um espaço em branco => Expressão regular
+
+    if (cep.length === 8){
+
+        try{ //Caso ocorra um erro dentro de try, ele vai para catch
+            const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`) //Espera a requisição externa do CEP pelo ViaCEP
+            const dados = await resposta.json() //Converte a informação em JSON
+
+            if (!dados.erro){ //Se dados erro é falso (não deu erro) >>> utiliza os dados
+                console.log(dados)
+                inputRua.value = dados.logradouro
+                inputBairro.value = dados.bairro
+                inputCidade.value = dados.localidade
+                inputEstado.value = dados.estado
+            } else{
+                alert("CEP Inválido! Tente novamente!")
+            }
+
+        } catch (error){ //O que é feito caso dê erro no try
+            alert("Erro ao buscar CEP, verifique o número e tente novamente!")
+            console.log(error)
+        }
+
+    } else{
+        alert("CEP Inválido! Digite um CEP com 8 dígitos")
+    }
+}
+
+function buscarUsuario(){
+    //lowercase >> deixa tudo em caixa baixa
+    //trim >> remove espaços nas extremidades
+    const textoBusca = inputBusca.value.toLowerCase().trim()
+
+    if (textoBusca.length === 0){
+        renderizarTabela
+        return //Retorna vazio
+    }
+
+    const usuariosFiltrados = usuarios.filter(user =>{ //Retorna os usuarios filtrados se o includes abaixo indicar um usuario
+        return user.nome.includes(textoBusca) || user.sobrenome.includes(textoBusca) || user.email.includes(textoBusca) //includes verifica se o termo existe no array user.elemento
+    })
+
+    renderizarTabela()   //PARAMOS AQUI~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+}
+
 function inicializacao(){ //Manter por último
     btnAdicionar.addEventListener('click', mostrarTelaCadastro) //Botão add mostra Cadastro
     btnVoltar.addEventListener('click', mostrarTelaLista) //Botão voltar mostra Lista
+    btnBuscarCep.addEventListener('click', buscarCEP) //Botão de buscarCEP usa a função de busca CEP
 
     form.addEventListener('submit', salvarUsuario) //Quando enviar os dados por submit, executa a função
     
+    inputBusca.addEventListener("input", buscarUsuario) //Qualquer input na busca já executa a função de buscar
+
     tabelaCorpo.addEventListener('click', (event) =>{
         const target = event.target.closest("button") //Clicando em algum lugar, busca o pai do item >> botão/mostra o ID
         //console.log(target)
