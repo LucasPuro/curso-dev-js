@@ -1,5 +1,5 @@
 /* ARRAY/USUÁRIOS |:._______________________________________________________________*/
-    let usuarios = JSON.parse(localStorage.getItem("cadastro_usuarios")) || [] //Converte o JSON string em um objeto se existir, se não cria um array vazio
+let usuarios = JSON.parse(localStorage.getItem("cadastro_usuarios")) || []
 
 /* ELEMENTOS |:.____________________________________________________________________*/
     const telaLista = document.querySelector("#tela-lista") //Tela de lista

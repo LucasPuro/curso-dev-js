@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        //Objetos
+        const conta1 = {titular: "Lucas", saldo: 500}
+        const conta2 = {titular: "Maria", saldo: 5000}
+
+        //Sem POO
+        function exibirSaldo(conta){
+            console.log(`O saldo daconta é ${conta.saldo}`)
+        }
+
+        exibirSaldo(conta1)
+        exibirSaldo(conta2)
+
+        // ______________________________________
+
+        //Com POO - Mini objeto ContaBancaria
+        class ContaBancaria{
+            //Construtor
+            constructor(titular, saldoInicial){
+                this.titular = titular //this é usado para o objeto "em uso"
+                this.saldoInicial = saldoInicial
+            }
+
+            exibirSaldo(){
+                console.log(`O saldo daconta é ${conta.saldo}`)
+            }
+        }
+
+        const contaLucas = new ContaBancaria("Lucas", 500) // Objeto que cria contas bancárias
+        const contaMaria = new ContaBancaria("Maria", 5000)
+
+        contaLucas.exibirSaldo() //Chama o método de exibir saldo dentro da classe existente
+
+    </script>
+</body>
+</html>
