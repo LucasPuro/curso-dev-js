@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
-
-
 
     <script>
 
@@ -41,8 +38,58 @@
 
         const contaLucas = new ContaBancaria("Lucas", 500) // Objeto que cria contas bancárias
         const contaMaria = new ContaBancaria("Maria", 5000)
-
         contaLucas.exibirSaldo() //Chama o método de exibir saldo dentro da classe existente
+
+
+
+        // CLASSE DE PRODUTO
+
+        class produto{
+
+            constructor(nome, preco, estoque){
+                this.nome = nome
+                this.preco = preco
+                this.estoque = estoque
+            }
+
+            descrever(){
+                console.log(`Produto: ${this.nome}, seu valor é ${this.preco} e o estoque atual é ${this.estoque} unidades`)
+            }
+
+            vender(quantidade){
+                if (quantidade > this.estoque){
+                    console.log(`Estoque insuficiente para a venda. Temos apenas ${this.estoque} unidades do produto ${this.nome}`)
+                    return //Para a execução
+                }
+
+                this.estoque -= quantidade //Decremento com a quantidade inserida de base
+                console.log(`${quantidade} unidades do produto ${this.nome} vendidas com sucesso!`)
+            }
+
+            repor(quantidade){
+                this.estoque += quantidade //Incremento com a quantidade inserida de base
+                console.log(`Estoque renovado! ${quantidade} unidades do produto ${this.nome} adicionadas ao estoque.`)
+            }
+
+        }
+
+        const caneca = new produto("Caneca Senai", 39.99, 10)
+        const camiseta = new produto("Camiseta Senai", 69.99, 8)
+
+        caneca.descrever()
+        camiseta.descrever()
+
+        // Manipular os produtos
+        console.log("Vendas e Reposições")
+        caneca.vender(2)
+        camiseta.vender(3)
+        caneca.vender(20)
+        caneca.repor(50)
+        caneca.vender(20)
+
+        console.log("Resultado Final")
+        caneca.descrever()
+        camiseta.descrever()
 
     </script>
 </body>
